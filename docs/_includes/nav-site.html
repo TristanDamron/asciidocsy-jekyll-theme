@@ -12,11 +12,11 @@ Generates header navigation menu.
   {% endif %}
   {% if link.kids %}
   <li class="nav-item mr-4 mb-2 mb-lg-0 dropdown">
-    <a class="nav-link dropdown-toggle {{active}}" href="{{ link.href | default: '#' }}" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <a class="nav-link dropdown-toggle {{active}}" href="{{ link.href | prepend: site.baseurl }}" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       {{ link.text }}</a>
     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
     {% for kid in link.kids %}
-      <a class="dropdown-item" href="{{ kid.href }}">
+      <a class="dropdown-item" href="{{ kid.href | prepend: site.baseurl }}">
         {{ kid.text }}
       </a>
     {% endfor %}
@@ -24,7 +24,7 @@ Generates header navigation menu.
   </li>
   {% else %}
   <li class="nav-item mr-4 mb-2 mb-lg-0">
-    <a class="nav-link {{active}}" href="{{ link.href }}">{{ link.text}}</a>
+    <a class="nav-link {{active}}" href="{{ link.href | prepend: site.baseurl }}">{{ link.text}}</a>
   </li>
   {% endif %}
   {% assign active = "" %}

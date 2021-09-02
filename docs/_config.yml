@@ -47,6 +47,7 @@ asciidoctor:
   safe: 0
   base_dir: .
   attributes:
+    site-baseurl: /asciidocsy-jekyll-theme
     outfilesuffix: ''
     imagesdir: /images
     icons: font

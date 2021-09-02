@@ -11,7 +11,15 @@ include::README.adoc[tags=opener]
 This page is NOT part of the AsciiDocsy theme.
 It is merely the version 0.1.0-alpha landing page.
 
-link:/docs[[big]*Go straight to the docs for an example of AsciiDocsy in action.*]
+////
+  Per https://github.com/asciidoctor/jekyll-asciidoc#overview
+  You can set a site-baseurl variable in your _config.yml file
+  that is globally available to all Asciidoc content.
+
+  Use this to prepend the base url to links on the page.
+////
+
+link:{site-baseurl}/docs[[big]*Go straight to the docs for an example of AsciiDocsy in action.*]
 ====
 
 [.jumbotron.jumbotron-fluid.text-center]
